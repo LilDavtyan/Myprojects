@@ -1,0 +1,24 @@
+﻿@model IEnumerable<Les8.Models.Employee>
+           @using Les8.Models
+
+@{
+    ViewBag.Title = "Employee List";
+}
+
+<div style="font-family:Arial">
+    <h2>EmployeeList</h2>
+<ul>
+    @foreach(Employee employee in @Model)
+     {
+         <li>
+             @Html.ActionLink(employee.Name, "Details", new { id = employee.ID });
+         </li>
+     }   
+
+</ul>
+
+</div>
+<h6>
+    @Html.ActionLink("Go back to the department page", "Deplist","Department")
+</h6>
+

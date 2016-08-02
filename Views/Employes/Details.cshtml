@@ -1,0 +1,61 @@
+﻿@model Les8.Models.Employee
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+<table>
+
+    <tr>
+        <td>
+            Number: 
+        </td>
+        <td>
+            @Model.ID
+        </td>
+        
+    </tr>
+
+    <tr>
+        <td>
+            Name: 
+        </td>
+        <td>
+            @Model.Name
+        </td>
+
+    </tr>
+    <tr>
+        <td>
+            Gender: 
+        </td>
+        <td>
+            @Model.Gender
+        </td>
+
+    </tr>
+    <tr>
+        <td>
+            Age: 
+        </td>
+        <td>
+            @Model.Age
+        </td>
+
+    </tr>
+    <tr>
+        <td>
+            Department: 
+        </td>
+        <td>
+            @Model.Depid
+        </td>
+
+    </tr>
+
+</table>
+<br />
+<h6>@Html.ActionLink("Go back to Employee list", "EmployeeList", new { depid = @Model.Depid })</h6>
+
+

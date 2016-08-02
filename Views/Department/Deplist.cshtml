@@ -1,0 +1,21 @@
+﻿@using Les8.Models
+
+@model IEnumerable<Department>
+
+@{
+    ViewBag.Title = "Department List";
+}
+<div style="font-family:Arial">
+    <h2>Department list</h2>
+    <ul>
+        @foreach(Department dep in @Model)
+        {
+            <li>
+                @Html.ActionLink(dep.department, "EmployeeList", "Employes", new { Depid = dep.id }, null)
+            </li>
+            
+        }
+    </ul>
+
+</div>
+
